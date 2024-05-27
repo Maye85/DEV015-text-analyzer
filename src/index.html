@@ -11,23 +11,25 @@
  <header> 
   <h1>Analizador de texto</h1> 
  </header>
-
+<div class="todo">
   <h2>Te presentamos una herramienta para contar las metricas de textos, que te ayudará a saber la cantidad de palabras para establecer tus tarifas en traducciones</h2>
-  <script src="index.js" type="module"></script>
+ 
   <textarea name="user-input" placeholder="Escribe tu texto aquí por favor"></textarea>
   <ul class="lista">
-    <li class="caracteres">CARACTERES</li>
-    <li class="sin-espacios">CARACTERES SIN ESPACIOS</li>
-    <li class="palabras">PALABRAS</li>
-    <li class="numeros">NÚMEROS</li>
-    <li class="suma">SUMA DE NÚMEROS</li>
-    <li class="longitud">PROMEDIO DE LONGITUD</li>
-  </ul>
+    <li class="palabras" data-testid="word-count" >PALABRAS: 0</li>
+    <li class="caracteres" data-testid="character-count">CARACTERES</li>
+    <li class="sin-espacios" data-testid="character-no-spaces-count">CARACTERES SIN ESPACIOS</li>
+    <li class="numeros" data-testid="number-count">NÚMEROS</li>
+    <li class="suma" data-testid="number-sum">SUMA DE NÚMEROS</li>
+    <li class="longitud" data-testid="word-legth-average">PROMEDIO DE LONGITUD</li>
+   </ul>
+  </div>
 
   <button type="button" id="reset-button">Limpiar</button>
 
-</body>
 <footer>
   <p>Mayerling Hernandez</p>
 </footer>
+<script src="index.js" type="module"></script>
+</body>
 </html>
