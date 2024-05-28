@@ -3,12 +3,29 @@ const analyzer = {
     if(!text) return 0;
     return text.trim().split(/\s+/).length;
   },
+
   getCharacterCount: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres que se encuentran en el parámetro `text` de tipo `string`.
+    if(!text) return 0;
+    return text.length;
   },
+
+
   getCharacterCountExcludingSpaces: (text) => {
-    //TODO: esta función debe retornar el recuento de caracteres excluyendo espacios y signos de puntuación que se encuentran en el parámetro `text` de tipo `string`.
-  },
+    if(!text) return 0;
+    const signosDePuntuacion = [".", ",", ":", ";", "¿", "?", "¡", "!"];
+    let charCountExSpa = 0;
+
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (!signosDePuntuacion.includes(char) && char !==' '){
+          charCountExSpa++;
+     }
+    }
+
+        return charCountExSpa;
+    },
+  
+
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
@@ -17,7 +34,7 @@ const analyzer = {
   },
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-  }
+  },
 };
 
 export default analyzer;

@@ -5,27 +5,28 @@ import analyzer from './analyzer.js';
 const textarea = document.querySelector("textarea");
 const palabras = document.querySelector('.lista .palabras');
 const caracteresSinEspacios = document.querySelector('.lista .sin-espacios');
-const signosDePuntuacion = [".", ",", ":", ";", "¿", "?", "¡", "!"];
+const caracteres = document.querySelector('.lista .caracteres');
+const resetButton = document.getElementById('reset-button');
 
 textarea.addEventListener("input", () => {
  const text = textarea.value;
- const wordCount = analyzer.getWordCount(text);
+
+const wordCount = analyzer.getWordCount(text);
  palabras.textContent = `PALABRAS: ${wordCount}`; 
 
+ const characterCount = analyzer.getCharacterCount(text);
+caracteres.textContent = `CARACTERES: ${characterCount}`;
 
-let charCount = 0;
-for (let i = 0; i < text.length; i++) {
-    const charCountExSpa = text[i];
-    if (!signosDePuntuacion.includes(charCountExSpa) && charCountExSpa !==' '){
-        charCount++;
-    }
-}
-caracteresSinEspacios.textContent = `CARACTERES SIN ESPACIOS: ${charCount}`;
+
+const characterCountExcludingSpaces = analyzer.getCharacterCountExcludingSpaces(text);
+caracteresSinEspacios.textContent = `CARACTERES SIN ESPACIOS: ${characterCountExcludingSpaces}`;
+
 });
 
-const resetButton = document.getElementById('reset-button');
- console.log(resetButton);
- resetButton.addEventListener('click', () => {
+
+resetButton.addEventListener('click', () => {
  textarea.value = ''; 
- palabras.textContent="PALABRAS: 0"
-});
+ palabras.textContent="PALABRAS: 0";
+caracteres.textContent="CARACTERES: 0";
+ caracteresSinEspacios.textContent = "CARACTERES SIN ESPACIOS: 0";
+})
