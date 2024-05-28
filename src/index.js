@@ -4,19 +4,28 @@ import analyzer from './analyzer.js';
 
 const textarea = document.querySelector("textarea");
 const palabras = document.querySelector('.lista .palabras');
+const caracteresSinEspacios = document.querySelector('.lista .sin-espacios');
+const signosDePuntuacion = [".", ",", ":", ";", "¿", "?", "¡", "!"];
 
 textarea.addEventListener("input", () => {
-    const text = textarea.value;
-    const wordCount = analyzer.getWordCount(text);
-    palabras.textContent = `PALABRAS: ${wordCount}`; 
-});
+ const text = textarea.value;
+ const wordCount = analyzer.getWordCount(text);
+ palabras.textContent = `PALABRAS: ${wordCount}`; 
 
-const sinEspacios = [".", ",", ":", ";", "...", "¿?", "¡!"];
-for (let)
+
+let charCount = 0;
+for (let i = 0; i < text.length; i++) {
+    const charCountExSpa = text[i];
+    if (!signosDePuntuacion.includes(charCountExSpa) && charCountExSpa !==' '){
+        charCount++;
+    }
+}
+caracteresSinEspacios.textContent = `CARACTERES SIN ESPACIOS: ${charCount}`;
+});
 
 const resetButton = document.getElementById('reset-button');
  console.log(resetButton);
-resetButton.addEventListener('click', () => {
-    textarea.value = ''; 
-    palabras.textContent="PALABRAS: 0"
+ resetButton.addEventListener('click', () => {
+ textarea.value = ''; 
+ palabras.textContent="PALABRAS: 0"
 });
