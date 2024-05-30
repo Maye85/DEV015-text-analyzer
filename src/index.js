@@ -14,12 +14,12 @@ textarea.addEventListener("input", () => {
 const wordCount = analyzer.getWordCount(text);
  palabras.textContent = `PALABRAS: ${wordCount}`; 
 
- const characterCount = analyzer.getCharacterCount(text);
-caracteres.textContent = `CARACTERES: ${characterCount}`;
+const characterCount = analyzer.getCharacterCount(text);
+ caracteres.textContent = `CARACTERES: ${characterCount}`;
 
 
 const characterCountExcludingSpaces = analyzer.getCharacterCountExcludingSpaces(text);
-caracteresSinEspacios.textContent = `CARACTERES SIN ESPACIOS: ${characterCountExcludingSpaces}`;
+ caracteresSinEspacios.textContent = `CARACTERES SIN ESPACIOS: ${characterCountExcludingSpaces}`;
 
 });
 

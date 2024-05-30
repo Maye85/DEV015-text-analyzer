@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+ <head>
   <meta charset="utf-8">
   <title>Analizador de textos</title>
   <link rel="stylesheet" href="style.css" />
-</head>
+ </head>
 
-<body>
- <header> 
-  <h1>Analizador de texto</h1> 
- </header>
-<div class="todo">
-  <h2>Te presentamos una herramienta para contar las metricas de textos, que te ayudará a saber la cantidad de palabras para establecer tus tarifas en traducciones</h2>
- 
-  <textarea name="user-input" placeholder="Escribe tu texto aquí por favor"></textarea>
-  <ul class="lista">
-    <li class="palabras" data-testid="word-count" >PALABRAS: 0</li>
-    <li class="caracteres" data-testid="character-count">CARACTERES: 0</li>
-    <li class="sin-espacios" data-testid="character-no-spaces-count">CARACTERES SIN ESPACIOS: 0</li>
-    <li class="numeros" data-testid="number-count">NÚMEROS: 0</li>
-    <li class="suma" data-testid="number-sum">SUMA DE NÚMEROS: 0</li>
-    <li class="longitud" data-testid="word-legth-average">PROMEDIO DE LONGITUD: 0</li>
-   </ul>
- 
+  <body>
+    <header> 
+     <h1>Analizador de texto</h1> 
+    </header>
 
-  <button type="button" id="reset-button">Limpiar</button>
-</div>
-<footer>
-  <p>Mayerling Hernandez</p>
-</footer>
-<script src="index.js" type="module"></script>
-</body>
+    <div class="todo">
+      <h2>Te presentamos una herramienta para contar las metricas de textos, que te ayudará a saber la cantidad de palabras para establecer tus tarifas en traducciones</h2>
+ 
+     <textarea name="user-input" placeholder="Escribe tu texto aquí por favor"></textarea>
+     <ul class="lista">
+     <li class="palabras" data-testid="word-count" >PALABRAS: 0</li>
+     <li class="caracteres" data-testid="character-count">CARACTERES: 0</li>
+     <li class="sin-espacios" data-testid="character-no-spaces-count">CARACTERES SIN ESPACIOS: 0</li>
+     <li class="numeros" data-testid="number-count">NÚMEROS: 0</li>
+     <li class="suma" data-testid="number-sum">SUMA DE NÚMEROS: 0</li>
+     <li class="longitud" data-testid="word-legth-average">PROMEDIO DE LONGITUD: 0</li>
+     </ul>
+ 
+     <button type="button" id="reset-button">Limpiar</button>
+   </div>
+
+   <footer>
+     <p>Mayerling Hernandez</p>
+   </footer>
+
+     <script src="index.js" type="module"></script>
+
+  </body>
 </html>
