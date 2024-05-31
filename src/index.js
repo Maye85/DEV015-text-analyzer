@@ -6,6 +6,7 @@ const textarea = document.querySelector("textarea");
 const palabras = document.querySelector('.lista .palabras');
 const caracteresSinEspacios = document.querySelector('.lista .sin-espacios');
 const caracteres = document.querySelector('.lista .caracteres');
+const longitud = document.querySelector('.lista .longitud');
 const resetButton = document.getElementById('reset-button');
 
 textarea.addEventListener("input", () => {
@@ -17,16 +18,19 @@ const wordCount = analyzer.getWordCount(text);
 const characterCount = analyzer.getCharacterCount(text);
  caracteres.textContent = `CARACTERES: ${characterCount}`;
 
-
 const characterCountExcludingSpaces = analyzer.getCharacterCountExcludingSpaces(text);
  caracteresSinEspacios.textContent = `CARACTERES SIN ESPACIOS: ${characterCountExcludingSpaces}`;
 
+const averageWordLength = analyzer.getAverageWordLength(text);
+ longitud.textContent = `LONGITUD: ${averageWordLength}`;
+
 });
+
 
 
 resetButton.addEventListener('click', () => {
  textarea.value = ''; 
  palabras.textContent="PALABRAS: 0";
-caracteres.textContent="CARACTERES: 0";
+ caracteres.textContent="CARACTERES: 0";
  caracteresSinEspacios.textContent = "CARACTERES SIN ESPACIOS: 0";
 })
