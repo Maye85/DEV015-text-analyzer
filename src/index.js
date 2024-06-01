@@ -33,4 +33,5 @@ resetButton.addEventListener('click', () => {
  palabras.textContent="PALABRAS: 0";
  caracteres.textContent="CARACTERES: 0";
  caracteresSinEspacios.textContent = "CARACTERES SIN ESPACIOS: 0";
+ longitud.textContent = "LONGITUD: 0";
 })

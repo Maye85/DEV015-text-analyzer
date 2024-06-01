@@ -26,14 +26,14 @@ const analyzer = {
     },
   
   getAverageWordLength: (text) => {    
-    if(!text) return 0;
-    const words = text.trim().split(/\s+/);
-    const totalWords = words.length;
-    const sumLengths = words.reduce ((sum,word) => sum + word.length, 0);
-    const averageLength = totalWords > 0 ? parseFloat ((sumLengths / totalWords).toFixed(2)) : 0;
+    if(!text || text.trim().length === 0) return 0; // verifica si el texto está vacio
+    const words = text.trim().split(/\s+/); //divide el texto en palabras
+    const totalWords = words.length; //calcula el número total de palabras
+    const sumLengths = words.reduce ((sum,word) => sum + word.length, 0); //suma las longitudes de todas las palabras
+    const averageLength = totalWords > 0 ? parseFloat ((sumLengths / totalWords).toFixed(2)) : 0; //calcula la longitud promedio de palabras
     
     return averageLength;
-    
+                         
   },
 
 
