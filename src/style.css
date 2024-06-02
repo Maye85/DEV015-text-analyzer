@@ -1,4 +1,4 @@
-h1 {
+header {
     color: rgb(251, 251, 252);
     font-family: bol;
     text-align: center;  
@@ -13,7 +13,38 @@ h2{
     font-size: medium;
     text-align: center;  
 }
-.lista{
+
+.palabras{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    color:rgb(107, 14, 168);
+
+}
+.caracteres{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    color:rgb(107, 14, 168);
+
+}
+.sin-espacios{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    color:rgb(107, 14, 168);
+
+}
+.numeros{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    color:rgb(107, 14, 168);
+
+}
+.suma{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    color:rgb(107, 14, 168);
+
+}
+.longitud {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: large;
     color:rgb(107, 14, 168);
@@ -48,7 +79,7 @@ html {
   
 }
 
-p {
+footer {
     color:rgb(57, 12, 129);
     font-family: cursive;
     font-size: smaller;

@@ -22,7 +22,7 @@ const analyzer = {
           charCountExSpa++;
       }
      }
-        return charCountExSpa;
+      return charCountExSpa;
     },
   
   getAverageWordLength: (text) => {    
@@ -38,10 +38,27 @@ const analyzer = {
 
 
   getNumberCount: (text) => {
-    //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
+    if(!text) return 0;
+    const todosLosNumeros = /\d/g; //Define una expresión regular para encontrar todos los dígitos (del 0 al 9)
+    const numbers = text.match(todosLosNumeros); //Buscar todos los dígitos en el texto
+    if (!numbers) return 0;
+
+    return numbers.length;
+
   },
+
+
   getNumberSum: (text) => {
-    //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
+    if(!text) return 0;
+    const sumNum = /\d/g;
+    const number = text.match(sumNum);
+     
+    if (!number) return 0;
+    const sum = number.reduce((acc, num) => acc + parseInt(num, 10), 0);
+
+    return sum;
+
+
   },
 };
 
