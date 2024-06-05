@@ -43,7 +43,7 @@ const analyzer = {
 
   getNumberCount: (text) => {
     if(!text) return 0;
-    const todosLosNumeros = /\d/g; 
+    const todosLosNumeros = (/\b\d+(\.\d+)?\b/g); 
     //Define una expresión regular para encontrar todos los dígitos (del 0 al 9)
     const numbers = text.match(todosLosNumeros); 
     //Buscar todos los dígitos que coincidan de la const todosLosNumeros 
@@ -57,7 +57,7 @@ const analyzer = {
 
   getNumberSum: (text) => {
     if(!text) return 0;
-    const sumNum = /\d/g;
+    const sumNum = (/\b\d+(\.\d+)?\b/g);
     const number = text.match(sumNum);
      
     if (!number) return 0;
