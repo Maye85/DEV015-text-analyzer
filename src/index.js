@@ -16,7 +16,7 @@ textarea.addEventListener("input", () => { // escucha el input cada que se escri
 
   const wordCount = analyzer.getWordCount(text); //llama a una funcion para contar el numero de palabras
   palabras.textContent = `PALABRAS: ${wordCount}`; //crea cadena de texto con el numero de palabras
-
+ 
   const characterCount = analyzer.getCharacterCount(text);//llama a una funcion para contar el numero de caracteres
   caracteres.textContent = `CARACTERES: ${characterCount}`;//crea cadena de texto con el numero de caracteres
 

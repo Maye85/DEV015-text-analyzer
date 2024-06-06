@@ -14,13 +14,13 @@ const analyzer = {
 
   getCharacterCountExcludingSpaces: (text) => {
     if(!text) return 0;
-    const signosDePuntuacion = [".", ",", ":", ";", "¿", "?", "¡", "!"];
+    const signosDePuntuacion = [".", ",", ":", ";", "¿", "?", "¡", "!", "'"];
     //creamos la constante con los signos de puntuacion correspondientes
     let charCountExSpa = 0;
     //creamos una variable que estará en 0
     for (let i = 0; i < text.length; i++) {
-      //bucle para contar el indice desde 0 y si es mayor que 0 ir sumando 1
-      const char = text[i]; //se accede al indice yse evalua si cumple las condiciones del if
+      //bucle para contar el indice desde 0 y si es menor que 0 ir sumando 1
+      const char = text[i]; // declara char y le da el valor de del caracter en la posicion i
       if (!signosDePuntuacion.includes(char) && char !==' '){
       // evalua que en la cadena no haya espacios ni los signos
         charCountExSpa++;
