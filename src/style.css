@@ -8,7 +8,7 @@ header {
     border-bottom-left-radius: 30px; 
     border: #e1d5eb; /*crea una linea de borde dandole un color*/
     padding: 1px; /*espciado interno alrededor del contenido del elemento */
-    background: #cba4f8a8;
+    background: #AC91F8;
     width: 70%; /*ancho del elemento*/
     margin: 0 auto; /*centra el margen derecho e izquierdo automaticamente*/
 
@@ -94,6 +94,6 @@ footer {
     background-color: #e0c5ff9a; /*color de fondo*/
     border-radius: 10px; /*de esta forma afecta los 4 lados de la caja*/
     margin-bottom: 5px;
-    margin-top: 10px;
+    margin-top: 65px;
     width: 100%; /*ancho del elemento*/
    }

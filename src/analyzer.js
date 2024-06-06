@@ -30,20 +30,26 @@ const analyzer = {
   },
   
   getAverageWordLength: (text) => {    
-    if(!text || text.trim().length === 0) return 0; // verifica si el texto está vacio
-    const words = text.trim().split(/\s+/); //divide el texto en palabras
-    const totalWords = words.length; //calcula el número total de palabras
-    const sumLengths = words.reduce ((sum,word) => sum + word.length, 0); //suma las longitudes de todas las palabras
-    const averageLength = totalWords > 0 ? parseFloat ((sumLengths / totalWords).toFixed(2)) : 0; //calcula la longitud promedio de palabras
-    
-    return averageLength;
-                         
+    if(text) { 
+    //si text es null o undefine luego de elminar espacios en blanco
+      const limpiaEspa = text.trim();
+      if(!limpiaEspa) return 0;
+      const words = limpiaEspa.split(/\s+/);
+      const totalWords = words.length;
+      //almacena el número total de palabras
+      const sumLengths = words.reduce ((sum,word) => sum + word.length, 0); 
+      //suma las longitudes de todas las palabras
+      const averageLength = totalWords > 0 ? parseFloat ((sumLengths / totalWords).toFixed(2)) : 0; 
+      //si totalWord es mayor a 0 se calcula la longitud promedio
+      return averageLength;
+    } else {
+      return 0;        
+    }                 
   },
 
 
   getNumberCount: (text) => {
-    if(!text) return 0;
-    const todosLosNumeros = (/\b\d+(\.\d+)?\b/g); 
+    const todosLosNumeros = (/\b\d+(\.\d+)?\b/g); //BUSCAR LOS REGEX
     //Define una expresión regular para encontrar todos los dígitos (del 0 al 9)
     const numbers = text.match(todosLosNumeros); 
     //Buscar todos los dígitos que coincidan de la const todosLosNumeros 
@@ -56,17 +62,14 @@ const analyzer = {
 
 
   getNumberSum: (text) => {
-    if(!text) return 0;
     const sumNum = (/\b\d+(\.\d+)?\b/g);
     const number = text.match(sumNum);
-     
     if (!number) return 0;
-    const sum = number.reduce((acc, num) => acc + parseInt(num, 10), 0);
+    const sum = number.reduce((acc, num) => acc + parseFloat(num, 10), 0); //NO ENTIENDO BIEN
     //con reduce iteramos y toma el valor acumulado y el numero actual y se suma 
     //luego de convertirlo en un valor entero
     return sum;
-
-
+  
   },
 };
 

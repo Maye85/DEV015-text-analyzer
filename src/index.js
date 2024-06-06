@@ -4,11 +4,11 @@ import analyzer from './analyzer.js';
 
 const textarea = document.querySelector("textarea"); //busco el elemento testarea
 const palabras = document.querySelector('li[data-testid="word-count"]');
-const caracteresSinEspacios = document.querySelector('li[data-testid="character-count"]');
-const caracteres = document.querySelector('li[data-testid="character-no-spaces-count"]');
-const longitud = document.querySelector('li[data-testid="number-count"]');
-const numeros = document.querySelector('li[data-testid="number-sum"]');
-const suma = document.querySelector('li[data-testid="word-legth-average"]');
+const caracteres = document.querySelector('li[data-testid="character-count"]');
+const caracteresSinEspacios = document.querySelector('li[data-testid="character-no-spaces-count"]');
+const numeros = document.querySelector('li[data-testid="number-count"]');
+const suma = document.querySelector('li[data-testid="number-sum"]');
+const longitud = document.querySelector('li[data-testid="word-length-average"]');
 const resetButton = document.getElementById('reset-button'); //busco el elemento id reset-button
 
 textarea.addEventListener("input", () => { // escucha el input cada que se escribeconst text = textarea.value; //declaramos la constante y obtiene el contenido act del cuadro de texto
