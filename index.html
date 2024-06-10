@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+ <head>
+  <meta charset="utf-8">
+  <title>Analizador de textos</title>
+  <link rel="stylesheet" href="style.css" />
+ </head>
+
+  <body>
+    <header> 
+      <meta name="viewport" content="widt=device-width, initial-scale=1">
+     <h1>ANALIZADOR DE TEXTO</h1> 
+    </header>
+
+    <div>
+      <h2>Te presentamos una herramienta para contar las metricas de textos, que te ayudará a saber la cantidad de palabras para establecer tus tarifas en traducciones</h2>
+ 
+     <textarea name="user-input" placeholder="Escribe tu texto aquí por favor"></textarea>
+     
+     <ul class="lista">
+       <li class="metricas" data-testid="word-count" >PALABRAS: 0</li>
+       <li class="metricas" data-testid="character-count">CARACTERES: 0</li>
+       <li class="metricas" data-testid="character-no-spaces-count">CARACTERES SIN ESPACIOS: 0</li>
+       <li class="metricas" data-testid="number-count">NÚMEROS: 0</li>
+       <li class="metricas" data-testid="number-sum">SUMA DE NÚMEROS: 0</li>
+       <li class="metricas" data-testid="word-length-average">PROMEDIO DE LONGITUD: 0</li>
+     </ul>
+ 
+     <button type="button" id="reset-button">BORRAR</button>
+    </div>
+
+   <footer>
+     <p>MAYERLING HERNANDEZ</p>
+   </footer>
+
+     <script src="index.js" type="module"></script>
+
+  </body>
+</html>
