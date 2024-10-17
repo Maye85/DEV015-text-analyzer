@@ -1,27 +1,99 @@
-h1 {
-    color: rgb(251, 251, 252);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+header {
+    color: rgb(251, 251, 252); /*color del texto*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center; /*alinear en el centro*/
+    font-size: 10px; /*tamaño del texto*/
+    margin-bottom: 10px; /*crea un margen en la parte de abajo*/
+    border-top-right-radius: 30px; /*crea una curva en la parte superios derecha del borde*/
+    border-bottom-left-radius: 30px; 
+    border: #e1d5eb; /*crea una linea de borde dandole un color*/
+    padding: 1px; /*espciado interno alrededor del contenido del elemento */
+    background: #AC91F8;
+    width: 70%; /*ancho del elemento*/
+    margin: 0 auto; /*centra el margen derecho e izquierdo automaticamente*/
+
 }
 
 h2{
-    color:rgba(208, 185, 250, 0.808);
+    color:rgba(243, 240, 248, 0.952);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: medium;
+    font-size: 15px; /*tamaño del texto*/
+    text-align: center;  /*se sentra el texto dentro del elemento*/
+    margin-top: 5px; /*crea un margen en la parte de arriba*/
 }
-p {
-    color:rgb(57, 12, 129);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: small
+
+div {
+    padding: 10px; /*espciado interno alrededor del contenido del elemento */
+    border: 1px solid #cba4f8; /*estilo color y grosor del borde*/
+    border-top-right-radius: 30px; /*crea una curva en la parte superios derecha del borde*/
+    border-bottom-left-radius: 30px; 
+    box-sizing: border-box; /*calcula el tamaño total del elemento*/
+    width: 70%; /*ancho del elemento*/
+    margin: 0 auto; /*margen exterior*/
+    min-height: 200px; /*altura minima*/
+    background: linear-gradient(to bottom,#290446cb,#dfb4ffcb); /*define el fondo*/
+}
+
+.metricas {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: rgb(245, 244, 247);
+    padding: 10px; /*espciado interno alrededor del contenido*/
+    border: 1px solid #e0c5ff; /*estilo color y grosor del borde*/
+    background-color: #AC91F8; /*define el fondo*/
+    box-sizing: border-box; /*calcula el tamaño total del elemento*/
+    display: block; /*se mostrará como un bloque*/
+    margin: 0 auto; /*margen exterior*/
+    border-top-right-radius: 20px; 
+    border-bottom-left-radius: 20px; 
+    width: 50%; /*ancho del elemento*/
+    height: 35px; /*establece la altura del elemento*/
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+  
+textarea[name="user-input"] {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 20px;
+   color: #3b0366; 
+   padding: 10px; /*espciado interno alrededor del contenido*/
+   border: 1px solid #ccc; /*estilo color y grosor del borde*/
+   border-top-right-radius: 50px; 
+   border-bottom-left-radius: 50px;
+   box-sizing: border-box; /*calcula el tamaño total del elemento*/
+   display: block; /*se mostrará como un bloque*/
+   margin: 0 auto; /*margen exterior*/
+   width: 100%; /*ancho del elemento*/
+   height: 100px; /*establece la altura del elemento*/
+   background-color: #f2edf5;
+}
+
+#reset-button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    color: rgb(245, 244, 247);
+    padding: 10px; /*espciado interno alrededor del contenido*/
+    border-radius: 30px; /*de esta forma afecta los 4 lados de la caja*/
+    border: 1px solid #e0c5ff;
+    background-color: #2E094B; /*color de fondo*/
+    box-sizing: border-box; /*calcula el tamaño total del elemento*/
+    display: block; /*se mostrará como un bloque*/
+    margin: 0 auto; /*centra el margen derecho e izquierdo automaticamente*/
 }
 
 html {
-    background: linear-gradient(to bottom,#8e59b6,#DEB4FF);
+    background-image: url('fondo.jpg'); /*vincula una imagen para el fondo de la pagina*/
 }
 
-#limpiar {
-  background-color: rgb(235, 240, 239);
-  text-align: center;
-  border-radius: 35px;
-}
-
+footer {
+    color:rgb(57, 12, 129);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    text-align: center;  /*centrar texto*/
+    border: 1px solid #e0c5ff;
+    background-color: #e0c5ff9a; /*color de fondo*/
+    border-radius: 10px; /*de esta forma afecta los 4 lados de la caja*/
+    margin-bottom: 5px;
+    margin-top: 65px;
+    width: 100%; /*ancho del elemento*/
+   }
